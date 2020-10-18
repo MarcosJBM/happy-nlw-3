@@ -2,14 +2,15 @@ import React, { FormEvent, useState, ChangeEvent } from 'react';
 import { Map, Marker, TileLayer } from 'react-leaflet';
 import { FiPlus } from 'react-icons/fi';
 import { LeafletMouseEvent } from 'leaflet';
+import { useHistory } from 'react-router-dom';
 
 import Sidebar from '../../components/Sidebar';
 
 import mapIcon from '../../utils/mapIcon';
 
-import '../../styles/pages/create-orphanage.css';
 import api from '../../services/api';
-import { useHistory } from 'react-router-dom';
+
+import '../../styles/pages/create-orphanage.css';
 
 export default function CreateOrphanage() {
   const history = useHistory();
@@ -192,5 +193,3 @@ export default function CreateOrphanage() {
     </div>
   );
 }
-
-// return `https://a.tile.openstreetmap.org/${z}/${x}/${y}.png`;
