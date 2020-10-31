@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import {
   ScrollView,
   View,
-  StyleSheet,
   Switch,
   Text,
   TextInput,
@@ -15,6 +14,8 @@ import { useNavigation, useRoute } from "@react-navigation/native";
 import * as ImagePicker from "expo-image-picker";
 import { api } from "../../../services/api";
 
+import styles from "./styles";
+
 interface OrphanageDataRouteParams {
   position: {
     latitude: number;
@@ -26,7 +27,7 @@ export default function OrphanageData() {
   const [name, setName] = useState("");
   const [about, setAbout] = useState("");
   const [instructions, setInstructions] = useState("");
-  const [open_hours, setOpenHours] = useState("");
+  const [opening_hours, setOpeningHours] = useState("");
   const [open_on_weekends, setOpenOnWeekends] = useState(true);
   const [images, setImages] = useState<string[]>([]);
 
@@ -44,12 +45,12 @@ export default function OrphanageData() {
     data.append("latitude", String(latitude));
     data.append("longitude", String(longitude));
     data.append("instructions", instructions);
-    data.append("open_hours", open_hours);
+    data.append("opening_hours", opening_hours);
     data.append("open_on_weekends", String(open_on_weekends));
 
     images.forEach((image, index) => {
-      data.append("image", {
-        name: `image_${index}.png`,
+      data.append("images", {
+        name: `image_${index}.jpg`,
         type: "image/jpg",
         uri: image,
       } as any);
@@ -57,6 +58,7 @@ export default function OrphanageData() {
 
     api.post("orphanages", data);
     navigation.navigate("OrphanagesMap");
+    console.log(data);
   }
 
   async function handleSelectImages() {
@@ -130,8 +132,8 @@ export default function OrphanageData() {
       <Text style={styles.label}>Horario de visitas</Text>
       <TextInput
         style={styles.input}
-        value={open_hours}
-        onChangeText={setOpenHours}
+        value={opening_hours}
+        onChangeText={setOpeningHours}
       />
 
       <View style={styles.switchContainer}>
@@ -150,88 +152,3 @@ export default function OrphanageData() {
     </ScrollView>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-
-  title: {
-    color: "#5c8599",
-    fontSize: 24,
-    fontFamily: "Nunito_700Bold",
-    marginBottom: 32,
-    paddingBottom: 24,
-    borderBottomWidth: 0.8,
-    borderBottomColor: "#D3E2E6",
-  },
-
-  label: {
-    color: "#8fa7b3",
-    fontFamily: "Nunito_600SemiBold",
-    marginBottom: 8,
-  },
-
-  comment: {
-    fontSize: 11,
-    color: "#8fa7b3",
-  },
-
-  input: {
-    backgroundColor: "#fff",
-    borderWidth: 1.4,
-    borderColor: "#d3e2e6",
-    borderRadius: 20,
-    height: 56,
-    paddingVertical: 18,
-    paddingHorizontal: 24,
-    marginBottom: 16,
-    textAlignVertical: "top",
-  },
-
-  uploadedImagesContainer: {
-    flexDirection: "row",
-  },
-
-  uploadedImage: {
-    width: 64,
-    height: 64,
-    borderRadius: 20,
-    marginBottom: 32,
-    marginRight: 8,
-  },
-
-  imagesInput: {
-    backgroundColor: "rgba(255, 255, 255, 0.5)",
-    borderStyle: "dashed",
-    borderColor: "#96D2F0",
-    borderWidth: 1.4,
-    borderRadius: 20,
-    height: 56,
-    justifyContent: "center",
-    alignItems: "center",
-    marginBottom: 32,
-  },
-
-  switchContainer: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
-    marginTop: 16,
-  },
-
-  nextButton: {
-    backgroundColor: "#15c3d6",
-    borderRadius: 20,
-    justifyContent: "center",
-    alignItems: "center",
-    height: 56,
-    marginTop: 32,
-  },
-
-  nextButtonText: {
-    fontFamily: "Nunito_800ExtraBold",
-    fontSize: 16,
-    color: "#FFF",
-  },
-});
