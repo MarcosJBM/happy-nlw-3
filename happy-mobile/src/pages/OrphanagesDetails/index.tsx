@@ -12,9 +12,9 @@ import MapView, { Marker } from "react-native-maps";
 import { Feather, FontAwesome } from "@expo/vector-icons";
 import { RectButton, TouchableOpacity } from "react-native-gesture-handler";
 import { useRoute } from "@react-navigation/native";
+import { api } from "../../services/api";
 
 import mapMarkerImg from "../../images/map-marker.png";
-import { api } from "../../services/api";
 
 interface OrphanageDetailsRouteParams {
   id: number;
