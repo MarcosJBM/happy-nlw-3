@@ -36,7 +36,7 @@ export default function OrphanageDetails() {
   const { id } = route.params as OrphanageDetailsRouteParams;
 
   useEffect(() => {
-    api.get(`orphanages/${id}`).then((response) => {
+    api.get(`orphanages/${id}`).then(response => {
       setOrphanage(response.data);
     });
   }, [id]);
@@ -59,7 +59,7 @@ export default function OrphanageDetails() {
     <ScrollView style={styles.container}>
       <View style={styles.imagesContainer}>
         <ScrollView horizontal pagingEnabled>
-          {orphange.images.map((image) => {
+          {orphange.images.map(image => {
             return (
               <Image
                 key={image.id}
@@ -115,7 +115,7 @@ export default function OrphanageDetails() {
 
         <View style={styles.scheduleContainer}>
           <View style={[styles.scheduleItem, styles.scheduleItemBlue]}>
-            <Feather name="clock" size={40} color="#2AB5D1" />
+            <Feather name='clock' size={40} color='#2AB5D1' />
             <Text style={[styles.scheduleText, styles.scheduleTextBlue]}>
               De Segunda à Sexta {orphange.opening_hours}
             </Text>
@@ -123,14 +123,14 @@ export default function OrphanageDetails() {
 
           {orphange.open_on_weekends ? (
             <View style={[styles.scheduleItem, styles.scheduleItemGreen]}>
-              <Feather name="info" size={40} color="#39CC83" />
+              <Feather name='info' size={40} color='#39CC83' />
               <Text style={[styles.scheduleText, styles.scheduleTextGreen]}>
                 Atendemos fim de semana
               </Text>
             </View>
           ) : (
             <View style={[styles.scheduleItem, styles.scheduleItemRed]}>
-              <Feather name="info" size={40} color="#FF669D" />
+              <Feather name='info' size={40} color='#FF669D' />
               <Text style={[styles.scheduleText, styles.scheduleTextRed]}>
                 Não atendemos aos fins de semana
               </Text>
@@ -139,7 +139,7 @@ export default function OrphanageDetails() {
         </View>
 
         <RectButton style={styles.contactButton} onPress={() => {}}>
-          <FontAwesome name="whatsapp" size={24} color="#FFF" />
+          <FontAwesome name='whatsapp' size={24} color='#FFF' />
           <Text style={styles.contactButtonText}>Entrar em contato</Text>
         </RectButton>
       </View>

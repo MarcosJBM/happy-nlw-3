@@ -1,15 +1,15 @@
-import React from 'react';
+import React from "react";
 
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
+import { NavigationContainer } from "@react-navigation/native";
+import { createStackNavigator } from "@react-navigation/stack";
 
 const { Navigator, Screen } = createStackNavigator();
 
-import OrphanagesMap from '../src/pages/OrphanagesMap';
-import OrphanagesDetails from '../src/pages/OrphanagesDetails';
-import SelectMapPosition from './pages/CreateOrphanage/SelectMapPosition';
-import OrphanageData from './pages/CreateOrphanage/OrphanageData';
-import Header from './components/Header';
+import OrphanagesMap from "../src/pages/OrphanagesMap";
+import OrphanagesDetails from "../src/pages/OrphanagesDetails";
+import SelectMapPosition from "./pages/CreateOrphanage/SelectMapPosition";
+import OrphanageData from "./pages/CreateOrphanage/OrphanageData";
+import Header from "./components/Header";
 
 export default function Routes() {
   return (
@@ -17,32 +17,32 @@ export default function Routes() {
       <Navigator
         screenOptions={{
           headerShown: false,
-          cardStyle: { backgroundColor: '#f2f3f5' },
+          cardStyle: { backgroundColor: "#f2f3f5" },
         }}
       >
-        <Screen name="OrphanagesMap" component={OrphanagesMap} />
+        <Screen name='OrphanagesMap' component={OrphanagesMap} />
         <Screen
-          name="OrphanagesDetails"
+          name='OrphanagesDetails'
           component={OrphanagesDetails}
           options={{
             headerShown: true,
-            header: () => <Header showCancel={false} title="Orfanato" />,
+            header: () => <Header showCancel={false} title='Orfanato' />,
           }}
         />
         <Screen
-          name="SelectMapPosition"
+          name='SelectMapPosition'
           component={SelectMapPosition}
           options={{
             headerShown: true,
-            header: () => <Header title="Selecione no Mapa" />,
+            header: () => <Header title='Selecione no Mapa' />,
           }}
         />
         <Screen
-          name="OrphanageData"
+          name='OrphanageData'
           component={OrphanageData}
           options={{
             headerShown: true,
-            header: () => <Header title="Informe os Dados" />,
+            header: () => <Header title='Informe os Dados' />,
           }}
         />
       </Navigator>

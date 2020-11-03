@@ -45,7 +45,7 @@ export default {
     // Express.Multer.File[] define uma nova tipagem.
     const requestImages = request.files as Express.Multer.File[];
 
-    const images = requestImages.map((image) => {
+    const images = requestImages.map(image => {
       return { path: image.filename };
     });
 

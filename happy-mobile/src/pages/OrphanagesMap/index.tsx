@@ -22,7 +22,7 @@ export default function OrphanagesMap() {
   const navigate = useNavigation();
 
   useFocusEffect(() => {
-    api.get("orphanages").then((response) => {
+    api.get("orphanages").then(response => {
       setOrphanages(response.data);
     });
   });
@@ -47,7 +47,7 @@ export default function OrphanagesMap() {
           longitudeDelta: 0.008,
         }}
       >
-        {orphanages.map((orphanage) => {
+        {orphanages.map(orphanage => {
           return (
             <Marker
               key={orphanage.id}
@@ -82,7 +82,7 @@ export default function OrphanagesMap() {
           style={styles.createOrphanageButton}
           onPress={handleNavigateToCreateOrphanage}
         >
-          <Feather name="plus" size={20} color="#FFF" />
+          <Feather name='plus' size={20} color='#FFF' />
         </RectButton>
       </View>
     </View>

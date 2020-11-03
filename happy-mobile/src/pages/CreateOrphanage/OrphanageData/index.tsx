@@ -104,7 +104,7 @@ export default function OrphanageData() {
       <Text style={styles.label}>Fotos</Text>
 
       <View style={styles.uploadedImagesContainer}>
-        {images.map((image) => {
+        {images.map(image => {
           return (
             <Image
               key={image}
@@ -116,7 +116,7 @@ export default function OrphanageData() {
       </View>
 
       <TouchableOpacity style={styles.imagesInput} onPress={handleSelectImages}>
-        <Feather name="plus" size={24} color="#15B6D6" />
+        <Feather name='plus' size={24} color='#15B6D6' />
       </TouchableOpacity>
 
       <Text style={styles.title}>Visitação</Text>
@@ -139,7 +139,7 @@ export default function OrphanageData() {
       <View style={styles.switchContainer}>
         <Text style={styles.label}>Atende final de semana?</Text>
         <Switch
-          thumbColor="#fff"
+          thumbColor='#fff'
           trackColor={{ false: "#ccc", true: "#39CC83" }}
           value={open_on_weekends}
           onValueChange={setOpenOnWeekends}

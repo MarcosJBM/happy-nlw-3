@@ -21,13 +21,13 @@ export default function Header({ title, showCancel = true }: HeaderProps) {
   return (
     <View style={styles.container}>
       <BorderlessButton onPress={navigate.goBack}>
-        <Feather name="arrow-left" size={24} color="#15b6d6" />
+        <Feather name='arrow-left' size={24} color='#15b6d6' />
       </BorderlessButton>
       <Text style={styles.title}>{title}</Text>
 
       {showCancel ? (
         <BorderlessButton onPress={handleGoBackToHomePage}>
-          <Feather name="x" size={24} color="#ff669d" />
+          <Feather name='x' size={24} color='#ff669d' />
         </BorderlessButton>
       ) : (
         <View />
