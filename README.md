@@ -106,7 +106,3 @@ Para executar o **Server**, utilize:
 ```sh
  npm run dev
 ```
-
----
-
-<sup>Projeto desenvolvido com a tutoria de [Diego Fernandes](https://github.com/diego3g), da [Rocketseat](https://rocketseat.com.br/).</sup>
