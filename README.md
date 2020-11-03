@@ -48,30 +48,14 @@ Esta aplicação foi desenvolvida durante a **Next Level Week #3**, projeto da [
 <a id="web"></a>
 
 # 💻 Versão Web
-
-<div align="center">
-  <h3></h3>
-  <img src=".github/landingPage.PNG" width="800px" height="auto" alt="landingPage"/>
-  
-  <h3></h3>
-  <img src=".github/orphanageMap.PNG" width="800px" height="auto"/>
-  
-  <h3></h3>
-  <img src=".github/orphanageDetails.gif" width="800px" height="auto"/>
-  
-  <h3></h3>
-  <img src=".github/orphanageForm.gif" width="800px" height="auto"/>
-</div>
+Caso esteja curioso para saber como é a versão **Web** do **Happy**, o layout está disponivel no [Figma](https://www.figma.com/file/CNekmEBviDyzPPk6JthpxV/Happy-Web-(Copy)?node-id=0%3A1).
 
 <a id="mobile"></a>
 
 # 📱 Versão Mobile
+Caso esteja curioso para saber como é a versão **Mobile** do **Happy**, o layout está disponivel no [Figma](https://www.figma.com/file/PXtXpQFVHC28Mxd4qQ4pYQ/Happy-Mobile-Copy).
 
 <div align="center" flexDirection="row">
- <img src=".github/landingPageMobile.png" width="auto" height="500px">
- <img src=".github/orphanageDetailsMobile.gif" width="auto" height="500px"/>
- <img src=".github/areaSelectionMobile.png" width="auto" height="500px"/>
- <img src=".github/orphanageFormMobile.gif" width="auto" height="500px"/>
 </div>
 
 <a id="executar"></a>
