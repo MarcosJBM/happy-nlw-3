@@ -68,10 +68,10 @@ Esta aplicação foi desenvolvida durante a **Next Level Week #3**, projeto da [
 # 📱 Versão Mobile
 
 <div align="center" flexDirection="row">
- <img src=".github/landingPageMobile.png" width="auto" height="500px">
- <img src=".github/orphanageDetailsMobile.gif" width="auto" height="500px"/>
- <img src=".github/areaSelectionMobile.png" width="auto" height="500px"/>
- <img src=".github/orphanageFormMobile.gif" width="auto" height="500px"/>
+ <img src=".github/landingPageMobile.png" width="auto" height="450px">
+ <img src=".github/orphanageDetailsMobile.gif" width="auto" height="450px"/>
+ <img src=".github/areaSelectionMobile.png" width="auto" height="450px"/>
+ <img src=".github/orphanageFormMobile.gif" width="auto" height="450px"/>
 </div>
 
 <a id="executar"></a>
